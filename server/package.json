@@ -1,0 +1,48 @@
+{
+  "name": "server",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "format": "prettier . --write",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@jest/globals": "^29.7.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase": "^10.12.2",
+    "ollama": "^0.5.6"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "./llm_code.js"
+    ]
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/tests/*.test.js"
+    ],
+    "transform": {},
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Server Unit Tests Report"
+        }
+      ]
+    ]
+  }
+}
