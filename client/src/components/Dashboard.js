@@ -142,11 +142,11 @@ export const DashboardRender = ({
               <div>
                 <p>
                   <b>Expected: </b>
-                  {testResult.failureDetails[0]?.matcherResult.expected}
+                  {testResult.failureDetails[0]?.matcherResult?.expected}
                 </p>
                 <p>
                   <b>Actual: </b>
-                  {testResult.failureDetails[0]?.matcherResult.actual}
+                  {testResult.failureDetails[0]?.matcherResult?.actual}
                 </p>
               </div>
             ) : null}
